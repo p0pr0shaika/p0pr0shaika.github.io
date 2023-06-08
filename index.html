@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <title>My Website</title>
+</head>
+<body>
+    <header>
+    <nav>
+        <div class="burger-menu" onclick="toggleNav()">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#tabs" onclick="closeNav()">Tab</a></li>
+            <li><a href="#filter" onclick="closeNav()">Filter</a></li>
+            <li><a href="#slider" onclick="closeNav()">Slider</a></li>
+            <li><a href="#accordion" onclick="closeNav()">Accordion</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main>
+        <section class="modal">
+            <div class="modal-content">
+            <h2>Это бесячее Модальное окно</h2>
+            <p>А это не менее бесячий текст</p>
+            <button onclick="closeModal()">Закрыть скорее</button>
+            </div>
+        </section>
+    
+    <div class="sec1"><section class="tabs" id="tabs">
+        <div class="tab-buttons">
+            <button onclick="openTab(event, 'tab1')">ТАБ 1</button>
+            <button onclick="openTab(event, 'tab2')">ТАБ 2</button>
+            <button onclick="openTab(event, 'tab3')">ТАБ 3</button>
+        </div>
+        <div class="tab-content" id="tab1">
+            <h3>Это первый ТАБ</h3>
+            <p>А здесь написан текст первого таба</p>
+        </div>
+        <div class="tab-content" id="tab2">
+            <h3>Это второй ТАБ</h3>
+            <p>А здесь написан текст второго таба</p>
+        </div>
+        <div class="tab-content" id="tab3">
+            <h3>Это третий ТАБ</h3>
+            <p>А здесь написан текст третьего таба</p>
+        </div>
+    </section></div>
+    
+    <div class="sec2"><section class="filter" id="filter">
+        <div class="filter-buttons">
+            <button onclick="filterItems('all')">Все</button>
+            <button onclick="filterItems('category1')">Категория 1</button>
+            <button onclick="filterItems('category2')">Категория 2</button>
+            <button onclick="filterItems('category3')">Категория 3</button>
+        </div>
+        <div class="items">
+            <div class="item category1">Элемент 1</div>
+            <div class="item category2">Элемент 2</div>
+            <div class="item category3">Элемент 3</div>
+            <div class="item category1">Элемент 4</div>
+            <div class="item category2">Элемент 5</div>
+            <div class="item category3">Элемент 6</div>
+        </div>
+    </section></div>
+    
+    <div class="sec3"><section class="slider" id="slider">
+        <div class="slider-container">
+            <div class="slide"><img src="img/photo1.jpg" alt="Slide 1"></div>
+            <div class="slide"><img src="img/photo2.jpeg" alt="Slide 2"></div>
+            <div class="slide"><img src="img/photo3.jpeg" alt="Slide 3"></div>
+        </div>
+        <button id="prevBtn">Назад</button>
+        <button id="nextBtn">Далее</button>
+    </section></div>
+    
+    <div class="sec4"><section class="accordion" id="accordion">
+        <div class="accordion-item">
+            <div class="accordion-title" onclick="toggleAccordion(this)">Аккордеон 1</div>
+            <div class="accordion-content">
+                <p>Это текст 1го аккордиона.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-title" onclick="toggleAccordion(this)">Аккордеон 2</div>
+            <div class="accordion-content">
+                <p>Это текст 2го аккордиона.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-title" onclick="toggleAccordion(this)">Аккордеон 3</div>
+            <div class="accordion-content">
+                <p>Это текст 3го аккордиона.</p>
+            </div>
+        </div>
+    </section></div>
+    
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
